@@ -18,4 +18,4 @@ and then upload them so that key word extraction can be performed.
 - Download the DeepSpeech pretrained model `curl -LO https://github.com/mozilla/DeepSpeech/releases/download/v0.8.1/deepspeech-0.8.1-models.pbmm` `curl -LO https://github.com/mozilla/DeepSpeech/releases/download/v0.8.1/deepspeech-0.8.1-models.scorer`
 - Go back into root project directory `cd ../..`
 - Setup the database `python manage.py migrate`
-- Finally (!) run the development server `python manage.py runserver`
+- Finally (!) run the development server `python manage.py runserver` and navigate to `http://127.0.0.1:8000/` in your browser

@@ -1,7 +1,7 @@
 # KeySpeech simple
 This is a simplified version of the original KeySpeech web app, updated for [DeepSpeech 0.8.1](https://github.com/mozilla/DeepSpeech)
 
-## What is does
+## What it does
 - With KeySpeech you can create a user account, record mp3 audios through your browser 
 and then upload them so that key word extraction can be performed. 
 - Key word lists are saved in the database and are presented in an easily searchable and filterable UI.

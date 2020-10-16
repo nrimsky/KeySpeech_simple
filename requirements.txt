@@ -6,6 +6,7 @@ django-filter==2.4.0
 joblib==0.17.0
 nltk==3.5
 numpy==1.17.3
+pydub==0.24.1
 pytz==2020.1
 regex==2020.10.15
 sqlparse==0.4.1

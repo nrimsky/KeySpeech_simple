@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block page_content %}
+
+    <h1>Welcome to KeySpeech, <span style="color: #0d21a1">{{ user.username }}</span> !</h1>
+
+    <h2>Search your word list collection:</h2>
+    {% if filter %}
+        <form method="get">
+            <div class="form-col">
+                {{ filter.form.as_p }}
+                <p>View these lists merged:
+                <label for="merge"></label><input type="checkbox" id="merge" name="merge" value="True">
+                </p>
+                <input type="submit" value="Filter">
+            </div>
+        </form>
+    {% endif %}
+    <p></p>
+    <h2>Here are your word lists:</h2>
+    <ul class="list-group list-group-flush">
+        {% for l in filter.qs %}
+            <li class="list-group-item">
+                <a href="/language_capture/{{ l.pk }}">{{l.document_name}} - created on {{ l.created_on }}</a>
+            </li>
+        {% endfor %}
+        <li class="list-group-item">
+            <a class="btn btn-outline-warning" href="{% url 'model_form_upload' %}" role="button">Create a new word list</a>
+        </li>
+    </ul>
+    {% if merge %}
+        <p></p>
+        <h2>The above word lists, merged:</h2>
+
+
+            <div class = "container-fluid">
+        <div class="row">
+            {% for word in mergewords%}
+                {% if word.1.1 == "noun" %}
+                    <div class = "card text-white bg_noun mb-3" style="width: 12rem;">
+                {% elif word.1.1 == "verb" %}
+                    <div class = "card text-white bg_verb mb-3" style="width: 12rem;">
+                {% elif word.1.1 == "adjective" %}
+                    <div class = "card text-white bg_adj mb-3" style="width: 12rem;">
+                {% elif word.1.1 == "adverb" %}
+                    <div class = "card text-white bg_adv mb-3" style="width: 12rem;">
+                {% else %}
+                    <div class="card text-white bg_oth mb-3" style="width: 12rem;">
+                {% endif %}
+            <div class = "card-body">
+                <h6 class = "card-title">{{word.0}}</h6>
+                <p class = "card-text">{{word.1.0}}</p>
+            </div>
+            </div>
+
+            {% endfor %}
+            </div>
+            </div>
+
+
+
+
+
+
+
+
+
+    {% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block page_content %}
+    <h2>Terms and Conditions</h2>
+    <h3>Keyspeech Privacy Policy</h3>
+    <p>This privacy policy will explain how our organisation uses the personal data we collect from you
+        when you use our web app.</p>
+    <h4>Topics covered in this policy:</h4>
+    <p> What data do we collect from you? </p>
+    <p> How will we use your data? </p>
+    <p> How do we keep your data secure? </p>
+    <p> What are your data protection rights? </p>
+    <p> Changes to our privacy policy </p>
+    <p> How to contact us </p>
+    <h4>What data do we collect from you?</h4>
+    <p> When you register an account with us, we collect your username.</p>
+    <p> When you use our web app to produce language board vocabulary, any personal
+        identification information that is included in the audio file you supply us with could appear
+        on the word frequency list. We recommend that you check all audio files before uploading
+        to ensure that there is no information that could be used to identify any person featured in
+        the recording, and that if the recording is taking place in a classroom you have been given
+        consent to record by a parent or guardian for each student in the classroom.</p>
+    <p> We do not store any of the audio files you upload, or any audio that is recorded through the
+        in-app recording feature.</p>
+    <h4>How will we use your data?</h4>
+    <p> The data we collect from the audio files you supply us with is used to produce vocabulary
+        lists that are intended for educational purposes only. We do not use this information for any
+        other purposes.</p>
+    <p> The data we collect when you register an account with us is used to identify you and manage
+        your account.</p>
+    <h4>How do we keep your data secure?</h4>
+    <p> Any vocabulary lists that you save are stored securely on your personal account through our
+        user registration system and are not visible to other users. You have the option to delete
+        vocabulary lists at any point.</p>
+    <p>The uploaded or recorded audio files are deleted after the vocabulary lists have been
+        produced and are not saved on any servers.</p>
+    <p>Only the most frequently used words are saved in the database. Any remaining transcribed
+    language is deleted as soon as a word list is generated. This way you can clearly see all the
+    words associated with your account.</p>
+    <p> We will only access the microphone of your device for recording audio to produce language
+        board vocabulary. When registering an account with us you can disable this feature by
+        choosing not to give permission for your microphone to be accessed. You can change this
+        option at any point in your browser's settings menu.</p>
+    <p>We do not sell any of your personal data. </p>
+    <h4>What are your data protection rights?</h4>
+    <p> You have the right to request Keyspeech for copies of your personal data
+    <p> You have the right to request that Keyspeech correct any information you believe is
+        inaccurate.</p>
+    <p>You have the right to request that Keyspeech erase your personal data, under certain
+        conditions.</p>
+    <p> You have the right to object to Keyspeech’s processing of your personal data, under certain
+        conditions</p>
+    <p>If you make a request, we have one month to respond to you. If you would like to exercise any of
+        these rights, please contact us at nr2118@ic.ac.uk</p>
+    <h4>Changes to our privacy policy</h4>
+    <p>Keyspeech keeps its privacy policy under regular review and places any updates on this web page.
+        This privacy policy was last updated on 8 March 2020</p>
+    <h4>How to contact us</h4>
+    <p>If you have any questions about Keyspeech's privacy policy, the data we hold on you, or you would
+        like to exercise one of your data protection rights, please do not hesitate to contact us.
+        Email us at: nr2118@ic.ac.uk</p>
+    <a class="btn btn-outline-secondary" href="{% url 'signup' %}" role="button">Go back</a>
+    <p></p>
+{% endblock %}

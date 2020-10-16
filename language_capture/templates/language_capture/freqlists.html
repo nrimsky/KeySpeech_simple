@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block page_content %}
+
+    <h1>{{ flist.document_name }} key words</h1>
+
+    <div class = "container-fluid">
+        <div class="row">
+            {% for word in flist.words.all%}
+                {% if word.p_o_s == "noun" %}
+                    <div class = "card text-white bg_noun mb-3" style="width: 12rem;">
+                {% elif word.p_o_s == "verb" %}
+                    <div class = "card text-white bg_verb mb-3" style="width: 12rem;">
+                {% elif word.p_o_s == "adjective" %}
+                    <div class = "card text-white bg_adj mb-3" style="width: 12rem;">
+                {% elif word.p_o_s == "adverb" %}
+                    <div class = "card text-white bg_adv mb-3" style="width: 12rem;">
+                {% else %}
+                    <div class="card text-white bg_oth mb-3" style="width: 12rem;">
+                {% endif %}
+            <div class = "card-body">
+                <h6 class = "card-title">{{word.word_text}}</h6>
+                <p class = "card-text">{{word.frequency}}</p>
+            </div>
+            </div>
+
+            {% endfor %}
+            </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <a class="btn btn-outline-secondary" href="{% url 'home' %}" role="button">Go back</a>
+                <form action="{% url 'delete' flist.pk %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+
+            <br>
+
+{% endblock %}

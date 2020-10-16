@@ -1,0 +1,13 @@
+asgiref==3.2.10
+click==7.1.2
+deepspeech==0.8.2
+Django==3.1.2
+django-filter==2.4.0
+joblib==0.17.0
+nltk==3.5
+numpy==1.17.0
+pytz==2020.1
+regex==2020.10.15
+sqlparse==0.4.1
+tqdm==4.50.2
+webrtcvad==2.0.10

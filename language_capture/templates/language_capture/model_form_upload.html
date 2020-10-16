@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+    <div class="elipse2"></div>
+
+
+    <div style="max-width: 32em;">
+        <h3>Record an audio file</h3>
+
+
+        <div class="row" id="controls">
+            <button id="recordButton">Record</button>
+            <button id="stopButton" disabled>Stop</button>
+        </div>
+        <br>
+
+        <div id="formats"></div>
+        <pre>Recording log will appear here</pre>
+        <pre id="log"></pre>
+        <p>You can download your recording and then use it to create a word list</p>
+        <p>Please allow access to your microphone via your browser settings</p>
+        <ol id="recordingsList"></ol>
+    </div>
+    <div style="max-width: 32em;">
+        <h3>Upload an audio file (.wav or .mp3)</h3>
+        <p>Files with size greater than 200MB cannot be uploaded</p>
+        <p>mp3 encoding is recommended as this facilitates uploads of longer recordings </p>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-secondary" >Upload</button>
+        </form>
+    </div>
+    <p></p>
+
+    <script src="{% static 'language_capture/javascripts/WebAudioRecorder.js' %}"></script>
+    <script src="{% static 'language_capture/javascripts/app.js' %}"></script>
+{% endblock %}

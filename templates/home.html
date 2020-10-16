@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+    <div class="elipse"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 whitetxt">
+                <h1 class="text-md-left">Data Driven Approach to <span style="color: rgb(13,33,161)">Language Boards</span> </h1>
+                <img src="{% static 'language_capture/children_image.svg' %}" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'language_capture/code_image.svg' %}" class="img-fluid" alt="Responsive image">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2></h2>
+                <h2 class="relative-bottom text-md-center">Generate language boards from a lesson’s <span style="color: #0d21a1">audio recording</span>
+                    to improve the efficacy of <span style="color: #0d21a1">Augmentative and Alternative Communication</span></h2>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
